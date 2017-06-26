@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Subir Archivos en Php</title>
+<meta name="description" content="Pagina para subir archivos en PHP.">
+
+<style>
+html{
+	background-color:#fff;
+	color:#000;
+}
+#panel{
+	display:block;
+	position:absolute;
+	width:600px;
+	left:50%;
+	margin-top:200px;
+	margin-left:-300px;
+	text-align:center;
+}
+#btn_subir{
+	float:right;
+}
+</style>
+</head>
+<body>
+<div id="panel">
+<form enctype="multipart/form-data" action="subir-archivos.php" method="POST"> 
+<input type="hidden" name="MAX_FILE_SIZE" value="250000" /> 
+Elige el Archivo a Subir:
+<input name="archivo-a-subir" type="file" /><br />
+<input id="btn_subir" type="submit" value="Subir Archivo" />
+</form>
+</div>
+</body>
+</html>
