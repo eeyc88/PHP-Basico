@@ -7,27 +7,27 @@ class UsuarioCollector extends Collector
 {
  
   function showUsuarios() {
-    $rows = self::$db->getRows("SELECT idusuario,nombre,clave FROM controlAgricola.usuario ");        
+    $rows = self::$db->getRows("SELECT idUsuario,nombre,clave FROM controlAgricola.usuario ");        
     $arrayUsuario= array();        
     foreach ($rows as $c){
-      $aux = new Usuario($c{'idusuario'},$c{'nombre'},$c{'clave'} );
+      $aux = new Usuario($c{'idUsuario'},$c{'nombre'},$c{'clave'} );
       array_push($arrayUsuario, $aux);
     }
     return $arrayUsuario;        
   }
 
   function showUsuario($nombre, $clave) {
-    $rows = self::$db->getRow("SELECT idusuario,nombre,clave FROM controlAgricola.usuario where idusuario = $id");        
+    $rows = self::$db->getRow("SELECT idUsuario,nombre,clave FROM controlAgricola.usuario where idUsuario = $id");        
     $arrayUsuario= array();        
     foreach ($rows as $c){
-      $aux = new Usuario($c{'idusuario'},$c{'nombre'},$c{'clave'} );
+      $aux = new Usuario($c{'idUsuario'},$c{'nombre'},$c{'clave'} );
       array_push($arrayUsuario, $aux);
     }
     return $arrayUsuario;        
   }
 
   function deleteUsuarios($id) {
-    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.usuario where idusuario = $id", null);             
+    $rows = self::$db->deleteRow("DELETE FROM controlAgricola.usuario where idUsuario = $id", null);             
   }
 
   function insertUsuarios($nombre, $clave) {
@@ -35,7 +35,7 @@ class UsuarioCollector extends Collector
   }
 
   function updateUsuarios($id,$nombre, $clave) {
-    $rows = self::$db->updateRow("Update controlAgricola.usuario set nombre = '$nombre', clave = '$clave' where idusuario =$id", null);             
+    $rows = self::$db->updateRow("Update controlAgricola.usuario set nombre = '$nombre', clave = '$clave' where idUsuario =$id", null);             
   }
 
 }
