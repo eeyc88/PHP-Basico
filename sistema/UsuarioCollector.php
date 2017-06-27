@@ -17,7 +17,7 @@ class UsuarioCollector extends Collector
   }
 
   function showUsuario() {
-    $rows = self::$db->getRow("SELECT nombre, clave FROM controlAgricola.usuario where nombre = '$nombre', clave = '$clave'");
+    $rows = self::$db->getRow("SELECT nombre, clave FROM controlAgricola.usuario");
     $arrayUsuario= array();
 	foreach ($rows as $c){
 	$aux = new Usuario($c{'nombre'},$c{'clave'});
