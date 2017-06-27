@@ -11,7 +11,7 @@ class Usuario
        $this->nombre = $nombre;
        $this->clave = $clave;
      }
-    
+
      function setIdUsuario($idUsuario){
        $this->idUsuario = $idUsuario;
      } 

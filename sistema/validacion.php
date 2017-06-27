@@ -16,13 +16,11 @@ foreach ($UsuarioCollectorObj->showUsuario($name,$password) as $c)
 			alert('Acceso Exitoso');
 			window.location = "login.php";
 		</script><?php
-	}else{?>
+	}
+}?>
 		<script>
         		alert('Acceso Denegado');
         		window.location="../index.html";        
-		</script><?php
-	}
-}
-?>
+		</script>
 
 
