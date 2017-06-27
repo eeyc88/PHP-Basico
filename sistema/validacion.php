@@ -6,9 +6,11 @@ include_once('UsuarioCollector.php');
 $UsuarioCollectorObj = new UsuarioCollector();
 
 
-if((!empty($name))&&(!empty($lastname))){
+if((!empty($name))&&(!empty($lastname)))
+{
 	$UsuarioCollectorObj->showUsuario($name,$lastname);
-	if (($name == $_POST['Nombre']) && ($lastname == $_POST['Apellido'])){
+	if (($name == $_POST['Nombre']) && ($lastname == $_POST['Apellido']))
+	{
 		session_start();
 		$_SESSION['usuario'] = $name;?>
 		<script>
@@ -19,5 +21,7 @@ if((!empty($name))&&(!empty($lastname))){
 		<script>
         		alert('Acceso Denegado');
         		window.location="../index.html";        
-		</script><?php } ?>
+		</script><?php }
+}
+?>
 
