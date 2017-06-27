@@ -17,13 +17,13 @@ class UsuarioCollector extends Collector
   }
 
   function showUsuario() {
-    $rows = self::$db->getRow("SELECT nombre, clave FROM controlAgricola.usuario");
-    $arrayUsuario= array();
+    $rows = self::$db->getRows("SELECT nombre, clave FROM controlAgricola.usuario");
+    $arrayUser= array();
 	foreach ($rows as $c){
 	$aux = new Usuario($c{'nombre'},$c{'clave'});
-	array_push($arrayUsuario, $aux);
+	array_push($arrayUser, $aux);
 	}
-    return $arrayUsuario;
+    return $arrayUser;
   }
 
   function deleteUsuarios($id) {
