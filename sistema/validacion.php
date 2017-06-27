@@ -11,7 +11,7 @@ foreach ($UsuarioCollectorObj->showUsuario($name,$password) as $c)
 {
 	if(($c->getNombre()==$name)&&($c->getClave()==$password)){
 		session_start();
-		$_SESSION['usuario'] = $name;?>
+		$_SESSION['Garcia'] = $name;?>
 		<script>
 			alert('Acceso Exitoso');
 			window.location = "login.php";
