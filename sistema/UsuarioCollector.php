@@ -16,9 +16,14 @@ class UsuarioCollector extends Collector
     return $arrayUsuario;        
   }
 
-  function showUsuario($nombre, $clave) {
-    $rows = self::$db->getRow("SELECT nombre,clave FROM controlAgricola.usuario where nombre = '$nombre', clave = '$clave'");
-    return true;
+  function showUsuario() {
+    $rows = self::$db->getRow("SELECT nombre, clave FROM controlAgricola.usuario where nombre = '$nombre', clave = '$clave'");
+    $arrayUsuario= array();
+	foreach ($rows as $c){
+	$aux = new Usuario($c{'nombre'},$c{'clave'});
+	array_push($arrayUsuario, $aux);
+	}
+    return $arrayUsuario;
   }
 
   function deleteUsuarios($id) {
