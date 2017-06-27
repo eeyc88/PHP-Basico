@@ -19,5 +19,5 @@ if((!empty($name))&&(!empty($lastname))){
 		<script>
         		alert('Acceso Denegado');
         		window.location="../index.html";        
-		</script>
+		</script><?php } ?>
 
