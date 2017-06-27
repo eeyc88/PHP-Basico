@@ -1,5 +1,7 @@
-<?php session_start(); ?>
+
 <?php
+session_start();
+
 
 $name = $_POST['Nombre'];
 $password = $_POST['Apellido'];
@@ -9,7 +11,6 @@ $UsuarioCollectorObj = new UsuarioCollector();
 foreach ($UsuarioCollectorObj->showUsuario() as $c)
 {
 	if(($c->getNombre()==$name)&&($c->getClave()==$password)){
-		session_start();
 		$_SESSION['usuario'] = $name;?>
 		<script>
 			alert('Acceso Exitoso');
