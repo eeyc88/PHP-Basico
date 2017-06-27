@@ -20,7 +20,7 @@ class UsuarioCollector extends Collector
     $rows = self::$db->getRows("SELECT nombre, clave FROM controlAgricola.usuario where nombre = '$nombre' and clave = '$clave'");
     $arrayUser= array();
 	foreach ($rows as $c){
-	$aux = new Usuario($c{'nombre'},$c{'clave'});
+	$aux = new Usuario($c{'idUsuario'},$c{'nombre'},$c{'clave'});
 	array_push($arrayUser, $aux);
 	}
     return $arrayUser;
