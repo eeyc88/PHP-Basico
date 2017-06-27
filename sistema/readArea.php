@@ -31,7 +31,7 @@ session_start();
 	  echo "</div>";
 	echo "</nav>";
 
-include_once("AreaCollector.php");
+include_once("areaCollector.php");
 $AreaCollectorObj = new AreaCollector();
 
 echo "<div class='container'>";

@@ -6,7 +6,7 @@ include_once('Collector.php');
 class AreaCollector extends Collector
 {
   
-  function showAreas() {
+  function showAreas(){
     $rows = self::$db->getRows("SELECT * FROM controlAgricola.area ");        
     $arrayArea= array();        
     foreach ($rows as $c){
@@ -16,16 +16,18 @@ class AreaCollector extends Collector
     return $arrayArea;        
   }
 
-  function deleteAreas($id) {
+  function deleteAreas($id){
     $rows = self::$db->deleteRow("DELETE FROM controlAgricola.area where idarea = $id", null);             
   }
 
-  function insertAreas($nombre, $tamano, $estado) {
-    $rows = self::$db->insertRow("Insert into controlAgricola.area (nombre, tamano, estado) values ('$nombre' , $tamano , $estado )" , null);             
+  function insertAreas($nombre, $tamano, $estado){
+    $rows = self::$db->insertRow("Insert into controlAgricola.area (nombre, tamano, estado) values ('$nombre', $tamano, $estado)", null);             
+    return true;
   }
  
- function updateAreas($id,$nombre, $tamano, $estado) {
+ function updateAreas($id, $nombre, $tamano, $estado){
     $rows = self::$db->updateRow("Update controlAgricola.area set nombre = '$nombre', tamano = $tamano, estado = $estado where idarea =$id", null);             
+    return true;
   }
  
 }

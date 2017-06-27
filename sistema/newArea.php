@@ -36,7 +36,7 @@ $n = $_POST['Nombre'];
 $d = $_POST['Tamano'];
 $a = $_POST['Estado'];
 
-include_once("AreaCollector.php");
+include_once("areaCollector.php");
 $AreaCollectorObj = new AreaCollector();
 $AreaCollectorObj->insertAreas($n,$d,$a);
 
