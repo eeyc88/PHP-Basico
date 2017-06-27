@@ -1,6 +1,7 @@
+<?php session_start(); ?>
 <?php
-$name=$_POST['Nombre'];
-$lastname=$_POST['Apellido'];
+$name = $_POST['Nombre'];
+$lastname = $_POST['Apellido'];
 
 include_once('UsuarioCollector.php');
 $UsuarioCollectorObj = new UsuarioCollector();
