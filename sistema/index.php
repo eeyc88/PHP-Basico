@@ -24,7 +24,7 @@ session_start();
 else{
 }
 ?>
-			<form method="POST" name = "flogin" id = "flogin" action ="login.php" >
+			<form method="POST" name = "flogin" id = "flogin" action ="validacion.php" >
 				<label>Nombre de Usuario:</label>
 				<input type="text" name="Nombre" id = "Nombre" class="form-control">
 				<label>Contraseña:</label>
