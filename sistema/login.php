@@ -27,7 +27,7 @@ session_start();
 		      	echo "<li><a href='menu.php'>Menú</a></li>";
 		echo "</ul>";
 		echo " <ul class='nav navbar-nav navbar-right'>";
-		$usuario = $_POST['Nombre'] ;
+		$usuario = $_POST['Garcia'] ;
 		$_SESSION['Garcia'] = $usuario;
 
 			echo "<li><a href='#'>Hola Usuario : (" . $_SESSION ['Garcia'] . ")</a></li>";
